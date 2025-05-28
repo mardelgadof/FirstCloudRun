@@ -1,0 +1,29 @@
+#allow_unauthenticated: true es para que 
+#vpc connector es para reglas de firewall.
+
+
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      ["build", "-t", "gcr.io/${_PROJECT_ID}/marlen-service", "./"]
+
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/${_PROJECT_ID}/marlen-service"]
+
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "run",
+        "deploy",
+        "marlen-service",
+        "--image",
+        "gcr.io/${_PROJECT_ID}/marlen-service",
+        "--region",
+        "us-east4",
+        "--platform",
+        "managed",
+        "--allow-unauthenticated",
+      ]
+options:
+  logging: CLOUD_LOGGING_ONLY
+  #los logs se guardan en cloud logging solamente
