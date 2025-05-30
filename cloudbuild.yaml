@@ -15,7 +15,7 @@ steps:
       [
         "run",
         "deploy",
-        "marlen-service",
+        "first-service",
         "--image",
         "gcr.io/${_PROJECT_ID}/first-service",
         "--region",
