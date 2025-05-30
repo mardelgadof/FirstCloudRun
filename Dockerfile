@@ -2,16 +2,13 @@
 # for building a Docker image. It specifies the base image, copies
 # necessary files, installs dependencies, and configures the container
 # to run the desired application or service.
-"""
-This Dockerfile is used to build a Docker image for a Python application.
-Aquí:
-    - especifico la imagen base
-    - copio los archivos necesarios
-    - instalo dependencias
-    - configuro el contenedor para ejecutar la aplicación o servicio deseado
 
-
-"""
+#This Dockerfile is used to build a Docker image for a Python application.
+#Aquí:
+#    - especifico la imagen base
+#    - copio los archivos necesarios
+#    - instalo dependencias
+#    - configuro el contenedor para ejecutar la aplicación o servicio deseado
 
 # Use the official lightweight Python image.
 # https://hub.docker.com/_/python
