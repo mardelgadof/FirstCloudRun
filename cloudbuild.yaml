@@ -5,10 +5,10 @@
 steps:
   - name: gcr.io/cloud-builders/docker
     args:
-      ["build", "-t", "gcr.io/${_PROJECT_ID}/marlen-service", "./"]
+      ["build", "-t", "gcr.io/${_PROJECT_ID}/first-service", "./"]
 
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/${_PROJECT_ID}/marlen-service"]
+    args: ["push", "gcr.io/${_PROJECT_ID}/first-service"]
 
   - name: "gcr.io/cloud-builders/gcloud"
     args:
@@ -17,7 +17,7 @@ steps:
         "deploy",
         "marlen-service",
         "--image",
-        "gcr.io/${_PROJECT_ID}/marlen-service",
+        "gcr.io/${_PROJECT_ID}/first-service",
         "--region",
         "us-east4",
         "--platform",
