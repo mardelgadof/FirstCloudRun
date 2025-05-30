@@ -7,4 +7,4 @@ soupsieve==2.7
 typing_extensions==4.13.2
 uv==0.7.6
 virtualenv==20.31.2
-gunicorn==21.2.0
+gunicorn==20.1.0
