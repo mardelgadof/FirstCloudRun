@@ -1,10 +1,1 @@
-beautifulsoup4==4.13.4
-distlib==0.3.9
-filelock==3.18.0
-google==3.0.0
-platformdirs==4.3.8
-soupsieve==2.7
-typing_extensions==4.13.2
-uv==0.7.6
-virtualenv==20.31.2
-gunicorn==21.2.0
+
